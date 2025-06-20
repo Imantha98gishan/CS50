@@ -10,7 +10,7 @@ jobs:
             - name: installing python
               uses: actions/setup-python@v1
               with: 
-                python-version: '3.13.3'
+                python-version: '3.13.x'
             - name: Run Django unit tests 
               run:
                 pip3 install --user django
