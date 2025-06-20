@@ -8,8 +8,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - with: 
-                python-version: python-latest
+                python-version: latest
             - name: Run Django unit tests 
               run:
-                pip install --user django
-                python manage.py test
+                pip3 install --user django
+                python3 manage.py test
