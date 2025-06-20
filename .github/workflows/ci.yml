@@ -7,8 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Run Django unit tests
-              run: 
-                apt upgrade --user python
+            - with: 
+                python-version: python-latest
+            - name: Run Django unit tests 
+              run:
                 pip install --user django
                 python manage.py test
