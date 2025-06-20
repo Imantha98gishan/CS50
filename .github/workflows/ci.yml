@@ -7,7 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - with: 
+            - name: installing python
+              uses: actions/setup-python@v1
+              with: 
                 python-version: '3.13.3'
             - name: Run Django unit tests 
               run:
