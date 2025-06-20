@@ -8,10 +8,9 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: installing python
-              uses: actions/setup-python@v3
+              uses: actions/setup-django@v5
               with: 
-                python-version: '3.13.x'
+                django-version: '5.2.x'
             - name: Run Django unit tests 
               run:
-                pip install --user django
                 python manage.py test
